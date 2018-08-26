@@ -8,7 +8,7 @@ check_internet <- function(){
 check_status <- function(res){
   stop_if_not(.x = status_code(res),
               .p = ~ .x == 200,
-              msg = "La API retornó un error.")
+              msg = "La API retorno un error.")
 }
 
 base_url <- "http://apis.datos.gob.ar/georef/api/"
