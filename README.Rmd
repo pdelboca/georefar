@@ -1,0 +1,65 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# georefar
+
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
+georefar es un paquete de R que implementa un wrapper para la API [georef-ar](https://georef-ar-api.readthedocs.io/es/latest/).
+
+
+La API del Servicio de Normalización de Datos Geográficos, permite normalizar y codificar los nombres de unidades territoriales de la Argentina (provincias, departamentos, municipios y localidades) y de sus calles, así como ubicar coordenadas dentro de ellas.
+
+## Instalación
+
+Se puede instalar la version en desarrollo del paquete desde github:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("pdelboca/georefar")
+```
+
+## Ejemplo de Usos
+
+Para obtener un listado de provincias:
+
+```{r}
+library(georefar)
+
+get_provincias(orden = "id", max = 5)
+```
+
+Para obtener un listado de departamentos:
+
+```{r}
+library(georefar)
+
+get_departamentos(provincia = "Corrientes", orden = "id", max = 5)
+```
+
+Para obtener un listado de municipios:
+
+```{r}
+library(georefar)
+
+get_municipios(provincia = "Santa Fe", max = 5)
+```
+
+Para obtener un listado de localidades:
+
+```{r}
+library(georefar)
+
+get_localidades(provincia = "Chubut", max = 5)
+```

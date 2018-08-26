@@ -44,3 +44,5 @@ use_package("purrr")
 
 # Clean your description
 use_tidy_description()
+
+use_readme_rmd()
