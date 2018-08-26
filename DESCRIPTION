@@ -1,17 +1,22 @@
-Package: {{ Package }}
+Package: georefar
 Title: API Wrapper para georef-ar
 Version: 0.0.0.9000
-Authors@R: person('Patricio', 'Del Boca', twitter = '@pdelboca', role = c('cre', 'aut'))
-Description: Wrapper para la API del Servicio de Normalización de Datos Geográficos de Argentina .
+Authors@R: 
+    person(given = "Patricio",
+           family = "Del Boca",
+           role = c("cre", "aut"),
+           email = "about@me.com")
+Description: Wrapper para la API del Servicio de Normalización
+    de Datos Geográficos de Argentina .
 License: MIT + file LICENSE
-LazyData: true
 URL: https://github.com/pdelboca/georefar
 BugReports: https://github.com/pdelboca/georefar
-Encoding: UTF-8
-GeoRef Ar: georefar
 Imports: 
+    attempt,
+    curl,
     httr,
     jsonlite,
-    curl,
-    attempt,
     purrr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0

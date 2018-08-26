@@ -8,10 +8,10 @@ unlink("DESCRIPTION")
 my_desc <- description$new("!new")
 
 # Set your package name
-my_desc$set("GeoRef Ar", "georefar")
+my_desc$set("Package", "georefar")
 
 #Set your name
-my_desc$set("Authors@R", "person('Patricio', 'Del Boca', twitter = '@pdelboca', role = c('cre', 'aut'))")
+my_desc$set("Authors@R", "person('Patricio', 'Del Boca', email='about@me.com', role = c('cre', 'aut', 'man'))")
 
 # Remove some author fields
 my_desc$del("Maintainer")
