@@ -21,7 +21,7 @@
 #' get_provincias(nombre = "Córdoba")
 #' }
 
-get_provincias <- function(id = NULL, nombre = NULL, orden = NULL, aplanar = NULL, campos = NULL, max = NULL, exacto = NULL){
+get_provincias <- function(id = NULL, nombre = NULL, orden = NULL, aplanar = TRUE, campos = NULL, max = NULL, exacto = NULL){
   args <- list(id = id, nombre = nombre, orden = orden, aplanar = aplanar, campos = campos, max = max, exacto = exacto)
   #stop_if_all(args, is.null, "You need to specify at least one argument")
 

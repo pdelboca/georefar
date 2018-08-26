@@ -5,7 +5,7 @@
 \title{Obtener Departamentos}
 \usage{
 get_departamentos(id = NULL, nombre = NULL, provincia = NULL,
-  orden = NULL, aplanar = NULL, campos = NULL, max = NULL,
+  orden = NULL, aplanar = TRUE, campos = NULL, max = NULL,
   exacto = NULL)
 }
 \arguments{

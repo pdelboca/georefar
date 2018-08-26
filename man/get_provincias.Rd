@@ -5,7 +5,7 @@
 \title{Obtener Provincias}
 \usage{
 get_provincias(id = NULL, nombre = NULL, orden = NULL,
-  aplanar = NULL, campos = NULL, max = NULL, exacto = NULL)
+  aplanar = TRUE, campos = NULL, max = NULL, exacto = NULL)
 }
 \arguments{
 \item{id}{text Filtrar por ID.}

@@ -5,7 +5,7 @@
 \title{Obtener Municipios}
 \usage{
 get_municipios(id = NULL, nombre = NULL, provincia = NULL,
-  departamento = NULL, orden = NULL, aplanar = NULL, campos = NULL,
+  departamento = NULL, orden = NULL, aplanar = TRUE, campos = NULL,
   max = NULL, exacto = NULL)
 }
 \arguments{

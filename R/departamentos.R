@@ -21,7 +21,7 @@
 #' get_departamentos()
 #' }
 
-get_departamentos <- function(id = NULL, nombre = NULL, provincia = NULL, orden = NULL, aplanar = NULL, campos = NULL, max = NULL, exacto = NULL){
+get_departamentos <- function(id = NULL, nombre = NULL, provincia = NULL, orden = NULL, aplanar = TRUE, campos = NULL, max = NULL, exacto = NULL){
   args <- list(id = id, nombre = nombre, provincia = provincia, orden = orden, aplanar = aplanar, campos = campos, max = max, exacto = exacto)
 
   check_internet()
