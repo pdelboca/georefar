@@ -32,34 +32,34 @@ devtools::install_github("pdelboca/georefar")
 
 ## Ejemplo de Usos
 
-Para obtener un listado de provincias:
-
+Para cargar la librería:
 ```{r}
 library(georefar)
+```
 
+
+Para obtener un listado de provincias:
+```{r}
 get_provincias(orden = "id", max = 5)
 ```
 
 Para obtener un listado de departamentos:
-
 ```{r}
-library(georefar)
-
 get_departamentos(provincia = "Corrientes", orden = "id", max = 5)
 ```
 
 Para obtener un listado de municipios:
-
 ```{r}
-library(georefar)
-
 get_municipios(provincia = "Santa Fe", max = 5)
 ```
 
 Para obtener un listado de localidades:
-
 ```{r}
-library(georefar)
-
 get_localidades(provincia = "Chubut", max = 5)
 ```
+
+Para obtener la ubicacion de un punto (reverse-geocoding):
+```{r}
+get_ubicacion(-31.6515236,-64.4358794)
+```
+

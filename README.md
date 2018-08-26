@@ -22,11 +22,15 @@ devtools::install_github("pdelboca/georefar")
 Ejemplo de Usos
 ---------------
 
-Para obtener un listado de provincias:
+Para cargar la librería:
 
 ``` r
 library(georefar)
+```
 
+Para obtener un listado de provincias:
+
+``` r
 get_provincias(orden = "id", max = 5)
 #>   centroide_lat centroide_lon fuente id                           nombre
 #> 1     -34.61449     -58.44586    IGN 02 Ciudad AutÃ³noma de Buenos Aires
@@ -39,8 +43,6 @@ get_provincias(orden = "id", max = 5)
 Para obtener un listado de departamentos:
 
 ``` r
-library(georefar)
-
 get_departamentos(provincia = "Corrientes", orden = "id", max = 5)
 #>   centroide_lat centroide_lon fuente    id            nombre provincia_id
 #> 1     -28.49739     -58.93044    IGN 18007       Bella Vista           18
@@ -59,8 +61,6 @@ get_departamentos(provincia = "Corrientes", orden = "id", max = 5)
 Para obtener un listado de municipios:
 
 ``` r
-library(georefar)
-
 get_municipios(provincia = "Santa Fe", max = 5)
 #>   centroide_lat centroide_lon departamento_id departamento_nombre fuente
 #> 1     -31.51617     -60.94975           82070        Las Colonias    IGN
@@ -79,8 +79,6 @@ get_municipios(provincia = "Santa Fe", max = 5)
 Para obtener un listado de localidades:
 
 ``` r
-library(georefar)
-
 get_localidades(provincia = "Chubut", max = 5)
 #>   centroide_lat centroide_lon departamento_id departamento_nombre fuente
 #> 1     -42.57362     -64.28369           26007              Biedma  BAHRA
@@ -100,4 +98,14 @@ get_localidades(provincia = "Chubut", max = 5)
 #> 3           Chubut Localidad simple (LS)
 #> 4           Chubut Localidad simple (LS)
 #> 5           Chubut Localidad simple (LS)
+```
+
+Para obtener la ubicacion de un punto (reverse-geocoding):
+
+``` r
+get_ubicacion(-31.6515236,-64.4358794)
+#>   departamento_id departamento_nombre fuente       lat       lon
+#> 1           14147        Santa MarÃ­a    IGN -31.65152 -64.43588
+#>   municipio_id municipio_nombre provincia_id provincia_nombre
+#> 1       141372      Alta Gracia           14         CÃ³rdoba
 ```
