@@ -109,3 +109,72 @@ get_ubicacion(-31.6515236,-64.4358794)
 #>   municipio_id municipio_nombre provincia_id provincia_nombre
 #> 1       141372      Alta Gracia           14         CÃ³rdoba
 ```
+
+Para obtener detalles de una calle:
+
+``` r
+get_calles(max = 5)
+#>   altura_fin_derecha altura_fin_izquierda altura_inicio_derecha
+#> 1                  0                    0                     0
+#> 2                  0                    0                     0
+#> 3                299                  200                     0
+#> 4                  0                    0                     0
+#> 5                600                  399                     0
+#>   altura_inicio_izquierda departamento_id departamento_nombre fuente
+#> 1                       0           06749        San Fernando  INDEC
+#> 2                       0           06427          La Matanza  INDEC
+#> 3                       0           06756          San Isidro  INDEC
+#> 4                       0           06270     JosÃ© M. Ezeiza  INDEC
+#> 5                       0           06270     JosÃ© M. Ezeiza  INDEC
+#>              id          nombre                              nomenclatura
+#> 1 0674901000645       CALLE S N     CALLE S N, San Fernando, Buenos Aires
+#> 2 0642701004220       CALLE S N       CALLE S N, La Matanza, Buenos Aires
+#> 3 0675601001135 FRANCISCO BEIRO FRANCISCO BEIRO, San Isidro, Buenos Aires
+#> 4 0627001000765       CALLE S N  CALLE S N, JosÃ© M. Ezeiza, Buenos Aires
+#> 5 0627001002075          GUERRA     GUERRA, JosÃ© M. Ezeiza, Buenos Aires
+#>   provincia_id provincia_nombre  tipo
+#> 1           06     Buenos Aires CALLE
+#> 2           06     Buenos Aires CALLE
+#> 3           06     Buenos Aires CALLE
+#> 4           06     Buenos Aires CALLE
+#> 5           06     Buenos Aires CALLE
+```
+
+Para normalizar una Direccion:
+
+``` r
+normalizar_direccion("Colon 127")
+#>    altura departamento_id departamento_nombre fuente            id nombre
+#> 1     127           06260 Esteban EcheverrÃ­a  INDEC 0626001001060  COLON
+#> 2     127           06490     Lomas de Zamora  INDEC 0649001002195  COLON
+#> 3     127           06035          Avellaneda  INDEC 0603501001265  COLON
+#> 4     127           06028     Almirante Brown  INDEC 0602801002130  COLON
+#> 5     127           06749        San Fernando  INDEC 0674901000790  COLON
+#> 6     127           06693        Roque PÃ©rez  INDEC 0669302000260  COLON
+#> 7     127           06329   General Las Heras  INDEC 0632902000155  COLON
+#> 8     127           06189     Coronel Dorrego  INDEC 0618903000265  COLON
+#> 9     127           82056             Iriondo  INDEC 8205603000430  COLON
+#> 10    127           82119         San Lorenzo  INDEC 8211902000285  COLON
+#>                                    nomenclatura provincia_id
+#> 1  COLON 127, Esteban EcheverrÃ­a, Buenos Aires           06
+#> 2      COLON 127, Lomas de Zamora, Buenos Aires           06
+#> 3           COLON 127, Avellaneda, Buenos Aires           06
+#> 4      COLON 127, Almirante Brown, Buenos Aires           06
+#> 5         COLON 127, San Fernando, Buenos Aires           06
+#> 6         COLON 127, Roque PÃ©rez, Buenos Aires           06
+#> 7    COLON 127, General Las Heras, Buenos Aires           06
+#> 8      COLON 127, Coronel Dorrego, Buenos Aires           06
+#> 9                  COLON 127, Iriondo, Santa Fe           82
+#> 10             COLON 127, San Lorenzo, Santa Fe           82
+#>    provincia_nombre  tipo ubicacion_lat ubicacion_lon
+#> 1      Buenos Aires CALLE            NA            NA
+#> 2      Buenos Aires CALLE     -34.76709     -58.39388
+#> 3      Buenos Aires CALLE            NA            NA
+#> 4      Buenos Aires CALLE            NA            NA
+#> 5      Buenos Aires CALLE     -34.42727     -58.55827
+#> 6      Buenos Aires CALLE            NA            NA
+#> 7      Buenos Aires CALLE            NA            NA
+#> 8      Buenos Aires CALLE     -38.71478     -61.29496
+#> 9          Santa Fe CALLE            NA            NA
+#> 10         Santa Fe CALLE            NA            NA
+```

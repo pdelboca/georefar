@@ -63,3 +63,13 @@ Para obtener la ubicacion de un punto (reverse-geocoding):
 get_ubicacion(-31.6515236,-64.4358794)
 ```
 
+Para obtener detalles de una calle:
+```{r}
+get_calles(max = 5)
+```
+
+Para normalizar una Direccion:
+```{r}
+normalizar_direccion("Colon 127")
+```
+
