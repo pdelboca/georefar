@@ -31,6 +31,6 @@ normalizar_direccion <- function(direccion, tipo = NULL, provincia = NULL, depar
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$direcciones
+   fromJSON(content(res, "text"))$direcciones
 }
 
