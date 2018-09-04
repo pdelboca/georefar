@@ -33,5 +33,5 @@ get_localidades <- function(id = NULL, nombre = NULL, provincia = NULL, departam
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$localidades
+   fromJSON(content(res, "text"))$localidades
 }
