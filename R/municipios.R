@@ -12,7 +12,7 @@
 #'
 #' @importFrom purrr compact
 #' @importFrom jsonlite fromJSON
-#' @importFrom httr GET
+#' @importFrom httr GET, content
 #' @export
 #' @rdname get_municipios
 #'
@@ -32,5 +32,5 @@ get_municipios <- function(id = NULL, nombre = NULL, provincia = NULL, departame
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$municipios
+   fromJSON(content(res, "text"))$municipios
 }

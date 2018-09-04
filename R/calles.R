@@ -13,7 +13,7 @@
 #' @importFrom attempt stop_if_all
 #' @importFrom purrr compact
 #' @importFrom jsonlite fromJSON
-#' @importFrom httr GET
+#' @importFrom httr GET, content
 #' @export
 #' @rdname get_calles
 #'
@@ -32,6 +32,6 @@ get_calles <- function(id = NULL, nombre = NULL, tipo = NULL, provincia = NULL, 
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$calles
+   fromJSON(content(res, "text"))$calles
 }
 

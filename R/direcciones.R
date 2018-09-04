@@ -12,7 +12,7 @@
 #' @importFrom attempt stop_if_all
 #' @importFrom purrr compact
 #' @importFrom jsonlite fromJSON
-#' @importFrom httr GET
+#' @importFrom httr GET, content
 #' @export
 #' @rdname normalizar_direccion
 #'
@@ -31,6 +31,6 @@ normalizar_direccion <- function(direccion, tipo = NULL, provincia = NULL, depar
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$direcciones
+   fromJSON(content(res, "text"))$direcciones
 }
 

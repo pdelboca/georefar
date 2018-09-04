@@ -11,7 +11,7 @@
 #' @importFrom attempt stop_if_all
 #' @importFrom purrr compact
 #' @importFrom jsonlite fromJSON
-#' @importFrom httr GET
+#' @importFrom httr GET, content
 #' @export
 #' @rdname get_provincias
 #'
@@ -31,5 +31,5 @@ get_provincias <- function(id = NULL, nombre = NULL, orden = NULL, aplanar = TRU
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$provincias
+   fromJSON(content(res, "text"))$provincias
 }

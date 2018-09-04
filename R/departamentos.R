@@ -11,7 +11,7 @@
 #'
 #' @importFrom purrr compact
 #' @importFrom jsonlite fromJSON
-#' @importFrom httr GET
+#' @importFrom httr GET, content
 #' @export
 #' @rdname get_departamentos
 #'
@@ -31,5 +31,5 @@ get_departamentos <- function(id = NULL, nombre = NULL, provincia = NULL, orden 
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$departamentos
+   fromJSON(content(res, "text"))$departamentos
 }
