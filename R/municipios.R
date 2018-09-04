@@ -12,7 +12,7 @@
 #'
 #' @importFrom purrr compact
 #' @importFrom jsonlite fromJSON
-#' @importFrom httr GET, content
+#' @importFrom httr GET content
 #' @export
 #' @rdname get_municipios
 #'

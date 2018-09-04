@@ -11,7 +11,7 @@
 #' @importFrom attempt stop_if_all
 #' @importFrom purrr compact
 #' @importFrom jsonlite fromJSON
-#' @importFrom httr GET, content
+#' @importFrom httr GET content
 #' @export
 #' @rdname get_provincias
 #'
