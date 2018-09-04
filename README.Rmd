@@ -37,7 +37,6 @@ Para cargar la librería:
 library(georefar)
 ```
 
-
 Para obtener un listado de provincias:
 ```{r}
 get_provincias(orden = "id", max = 5)
