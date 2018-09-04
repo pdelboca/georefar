@@ -32,5 +32,5 @@ get_municipios <- function(id = NULL, nombre = NULL, provincia = NULL, departame
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$municipios
+   fromJSON(content(res, "text"))$municipios
 }
