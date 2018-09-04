@@ -7,7 +7,7 @@
 #'
 #' @importFrom purrr compact
 #' @importFrom jsonlite fromJSON
-#' @importFrom httr GET
+#' @importFrom httr GET, content
 #' @export
 #' @rdname get_ubicacion
 #'
@@ -27,5 +27,5 @@ get_ubicacion <- function(lat, lon, aplanar = TRUE, campos = NULL){
 
   check_status(res)
 
-  as.data.frame(fromJSON(rawToChar(res$content))$ubicacion)
+  as.data.frame( fromJSON(content(res, "text"))$ubicacion)
 }
