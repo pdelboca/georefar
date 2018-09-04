@@ -31,5 +31,5 @@ get_provincias <- function(id = NULL, nombre = NULL, orden = NULL, aplanar = TRU
 
   check_status(res)
 
-  fromJSON(rawToChar(res$content))$provincias
+   fromJSON(content(res, "text"))$provincias
 }
