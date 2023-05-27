@@ -3,6 +3,15 @@
 georefar
 ========
 
+Importante: este paquete ha sido archivado y no está siendo mantenido. Toda la funcionalidad ha sido integrada en el paquete [geoAr](https://github.com/PoliticaArgentina/geoAr/) y todo futuro desarrollo será realizado en dicho paquete. Se recomienda migrar todas los usos de este paquete a su nueva version: https://github.com/PoliticaArgentina/geoAr/#instalaci%C3%B3n-install
+
+La API del paquete `georefar` __se ha mantenido en su totalidad__ al integrarse a `geoAr` por lo que el único cambio requerido en la migración es la dependencia (todos los métodos se mantuvieron al igual que su valor devuelto).
+
+Cualquier problema, se puede reportar en el Issue Tracker de `geoAr`: https://github.com/PoliticaArgentina/geoAr/issues
+
+Description
+-----------
+
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
 georefar es un paquete de R que implementa un wrapper para la API [georef-ar](https://georef-ar-api.readthedocs.io/es/latest/).
